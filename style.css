@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+    background: rgb(27, 27, 27);
+}
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.685);
+    transition : color .2s ease;
+}
+
+a:hover{
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    background: rgb(17, 17, 17);
+    margin: auto;
+    width: 75%;
+    border-radius: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+}
+
+.navbar ul{
+    padding: 20px;
+    margin: 30px;
+}
+
+.profile{
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+}
+
+.profile img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 0px 12px;
+}
+
+
+.intro p{
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.intro p b{
+    color: white;
+}
+
+.intro ul{
+    padding-top: 10%;
+}
+
+.intro ul li{
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    background: rgb(17, 17, 17);
+    border-radius: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+    text-align: center;
+    font-size: 30px;
+}
+
+.spacer{
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.spacer div{
+    background-color: white;
+    height: 65px;
+    width: .75%;
+    opacity: 0.1;
+    border-radius: 2rem;
+}
+
+.about{
+    padding-top:750px;
+}
