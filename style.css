@@ -10,33 +10,47 @@ body {
 
 a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.685);
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: white;
-    transition: color 0.2s ease-in-out;
+    color: rgba(255, 255, 255, 0.5); /* Default link color */
+    transition: color 0.2s ease; /* Transition for link color */
 }
 
 ul {
     list-style-type: none;
-    display: flex;
     justify-content: center;
 }
 
 .navbar {
     background: rgb(17, 17, 17);
-    width: 70%; /* Use percentage for responsiveness */
-    max-width: 700px; /* Max width for larger screens */
+    width: 80%; /* Responsive width */
+    max-width: 700px; /* Max width */
     margin: auto;
     border-radius: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
-    padding: .5rem; /* Use rem for consistent scaling */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: .25rem; /* Adjusted padding */
 }
 
-.navbar ul li{
-    margin: auto;
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin: auto; /* Adjusted margin */
+    padding: 5px 1%;
+    border-radius: 3rem;
+    transition: background 0.2s ease; /* Smooth background transition */
+}
+
+/* Hover effect applied to both li and a */
+.navbar ul li:hover {
+    background: rgba(0, 0, 0, 0.1); /* Background on li hover */
+}
+
+.navbar ul li a {
+    color: rgba(255, 255, 255, 0.5); /* Default link color */
+}
+
+.navbar ul li:hover a {
+    color: white; /* Text color on li hover */
 }
 
 .profile {
@@ -66,6 +80,7 @@ ul {
 }
 
 .intro ul {
+    display: flex;
     padding: 50px;
 }
 
@@ -74,14 +89,19 @@ ul {
     padding: 15px 50px;
     background: rgb(17, 17, 17);
     border-radius: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     text-align: center;
     font-size: 30px;
 }
 
+.intro ul li:hover a{
+    color: white;
+    transition: color 0.2s ease;
+}
+
 .spacer {
     margin: auto;
-    padding-top:50px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -89,7 +109,7 @@ ul {
 .spacer div {
     background-color: white;
     height: 65px;
-    width: .5%;
+    width: 0.5%;
     opacity: 0.1;
     border-radius: 2rem;
 }
@@ -102,10 +122,10 @@ ul {
 .about h2 {
     color: white;
     font-size: 2rem;
-    text-shadow: 0 2px 15px rgba(255, 255, 255, .19);
+    text-shadow: 0 2px 12px rgb(5, 5, 5);
 }
 
-.about p{
+.about p {
     color: rgba(255, 255, 255, 0.753);
     line-height: 1.5;
     margin: auto;
@@ -115,11 +135,36 @@ ul {
     font-size: 20px;
 }
 
+.projects {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.projects h2 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 2px 12px rgb(5, 5, 5);
+}
+
+.projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+
+.projects ul li {
+    background: rgb(17, 17, 17);
+    border-radius: 3rem;
+    color: white;
+    padding: 100px 200px;
+    margin: 10px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%; /* Adjust for smaller screens */
-        padding: 1rem;
+        width: 90%; /* Adjust width for smaller screens */
     }
 
     .intro p {
@@ -127,12 +172,12 @@ ul {
     }
 
     .intro ul li {
-        font-size: 100%; /* Smaller font size */
+        font-size: 100%; /* Adjust font size */
         padding: 3% 10%; /* Adjust padding */
     }
 
     .spacer div {
-        height: 50px; /* Adjust height for smaller screens */
+        height: 50px; /* Adjust height */
     }
 }
 
@@ -143,7 +188,7 @@ ul {
 
     .intro ul li {
         font-size: 15px;
-        padding: 10px 50px; /* Reduce padding */
-        margin: auto 15px;
+        padding: 10px 20px; /* Reduce padding */
+        margin: auto 5px; /* Adjust margin */
     }
 }
