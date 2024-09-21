@@ -1,75 +1,76 @@
-body{
-    margin: 0px;
+body {
+    padding-top: 30px;
+    margin: 0;
     background: rgb(27, 27, 27);
 }
 
-*{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.685);
-    transition : color .2s ease;
+    transition: color 0.2s ease;
 }
 
-a:hover{
+a:hover {
     color: white;
     transition: color 0.2s ease-in-out;
 }
 
-ul{
+ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-}
-
-.navbar{
-    background: rgb(17, 17, 17);
-    margin: auto;
-    width: 75%;
-    border-radius: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
-}
-
-.navbar ul{
-    padding: 20px;
-    margin: 30px;
-}
-
-.profile{
-    display: flex;
-    padding: 5%;
     justify-content: center;
 }
 
-.profile img{
+.navbar {
+    background: rgb(17, 17, 17);
+    width: 70%; /* Use percentage for responsiveness */
+    max-width: 700px; /* Max width for larger screens */
+    margin: auto;
+    border-radius: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+    padding: .5rem; /* Use rem for consistent scaling */
+}
+
+.navbar ul li{
+    margin: auto;
+}
+
+.profile {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.profile img {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
+    border-radius: 3rem;
     box-shadow: 0 0px 12px;
 }
 
-
-.intro p{
+.intro p {
     color: rgba(255, 255, 255, 0.712);
     font-size: 2rem;
     line-height: 1.2;
     text-align: center;
+    margin: 40px;
 }
 
-.intro p b{
+.intro p b {
     color: white;
 }
 
-.intro ul{
-    padding-top: 10%;
+.intro ul {
+    padding: 50px;
 }
 
-.intro ul li{
-    margin: auto;
-    width: 30%;
-    padding: 10px;
+.intro ul li {
+    margin: 20px 40px;
+    padding: 15px 50px;
     background: rgb(17, 17, 17);
     border-radius: 3rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
@@ -77,21 +78,71 @@ ul{
     font-size: 30px;
 }
 
-.spacer{
+.spacer {
     margin: auto;
-    padding-top: 100px;
+    padding-top:50px;
     display: flex;
     justify-content: center;
 }
 
-.spacer div{
+.spacer div {
     background-color: white;
     height: 65px;
-    width: .75%;
+    width: .5%;
     opacity: 0.1;
     border-radius: 2rem;
 }
 
-.about{
-    padding-top:750px;
+.about {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.about h2 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 2px 15px rgba(255, 255, 255, .19);
+}
+
+.about p{
+    color: rgba(255, 255, 255, 0.753);
+    line-height: 1.5;
+    margin: auto;
+    padding-top: 15px;
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%; /* Adjust for smaller screens */
+        padding: 1rem;
+    }
+
+    .intro p {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .intro ul li {
+        font-size: 100%; /* Smaller font size */
+        padding: 3% 10%; /* Adjust padding */
+    }
+
+    .spacer div {
+        height: 50px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro p {
+        font-size: 1.2rem; /* Further adjust for very small screens */
+    }
+
+    .intro ul li {
+        font-size: 15px;
+        padding: 10px 50px; /* Reduce padding */
+        margin: auto 15px;
+    }
 }
