@@ -41,7 +41,7 @@ ul {
 
 .profile {
     display: flex;
-    padding-top: 50px;
+    padding-top: 100px;
     justify-content: center;
 }
 
@@ -53,6 +53,7 @@ ul {
 }
 
 .intro p {
+    padding-top: 100px;
     color: rgba(255, 255, 255, 0.712);
     font-size: 2rem;
     line-height: 1.2;
