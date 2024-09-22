@@ -16,37 +16,42 @@ a {
 
 ul {
     list-style-type: none;
-    justify-content: center;
+    padding: 0; /* Reset padding for ul */
 }
 
 .navbar {
     background: rgb(17, 17, 17);
-    width: 80%; /* Responsive width */
-    max-width: 700px; /* Max width */
+    width: 70%; /* Set to 90% for better scaling */
+    max-width: 600px; /* Max width */
     margin: auto;
     border-radius: 3rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    padding: .25rem; /* Adjusted padding */
+    padding: 0rem; /* Adjusted padding */
 }
 
 .navbar ul {
     display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Space between items */
 }
 
 .navbar ul li {
-    margin: auto; /* Adjusted margin */
-    padding: 5px 1%;
-    border-radius: 3rem;
-    transition: background 0.2s ease; /* Smooth background transition */
-}
-
-/* Hover effect applied to both li and a */
-.navbar ul li:hover {
-    background: rgba(0, 0, 0, 0.1); /* Background on li hover */
+    flex: 1; /* Allow items to grow */
+    text-align: center; /* Center text inside the <li> */
 }
 
 .navbar ul li a {
+    display: block; /* Make the <a> a block element */
+    padding: 15px 20px;
+    border-radius: 3rem;
+    transition: background 0.2s ease; /* Smooth background transition */
     color: rgba(255, 255, 255, 0.5); /* Default link color */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect applied to both li and a */
+.navbar ul li a:hover {
+    background: rgba(31, 31, 31, 0.322); /* Background on li hover */
 }
 
 .navbar ul li:hover a {
@@ -81,22 +86,28 @@ ul {
 
 .intro ul {
     display: flex;
+    justify-content: center;
     padding: 50px;
 }
 
-.intro ul li {
-    margin: 20px 40px;
-    padding: 15px 50px;
+.intro ul li a {
+    margin: 15px 50px;
+    padding: 20px 50px;
+    white-space: nowrap;
     background: rgb(17, 17, 17);
     border-radius: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    text-align: center;
     font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: background 0.2s ease; /* Transition for background */
 }
 
-.intro ul li:hover a{
+.intro ul li a {
     color: white;
-    transition: color 0.2s ease;
+}
+
+/* Hover effect for intro ul */
+.intro ul li a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Background on li hover */
 }
 
 .spacer {
@@ -146,25 +157,34 @@ ul {
     text-shadow: 0 2px 12px rgb(5, 5, 5);
 }
 
-.projects ul {
+.projects ul li {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 50px;
+    padding: 10px;
 }
 
-.projects ul li {
+.projects ul li a {
     background: rgb(17, 17, 17);
-    border-radius: 3rem;
+    border-radius: 0.3rem;
     color: white;
-    padding: 100px 200px;
+    padding: 120px 35%;
     margin: 10px;
+    transition: background 0.2s ease; /* Transition for background */
+}
+
+.projects ul li a:hover {
+    background: rgba(0, 0, 0, 0.5); /* Hover effect */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 70%; /* Maintain width for smaller screens */
+        padding: 0rem; /* Increase padding for smaller screens */
+    }
+
+    .navbar ul li {
+        flex: 1; /* Keep items responsive */
     }
 
     .intro p {
@@ -173,7 +193,6 @@ ul {
 
     .intro ul li {
         font-size: 100%; /* Adjust font size */
-        padding: 3% 10%; /* Adjust padding */
     }
 
     .spacer div {
