@@ -1,213 +1,285 @@
-body {
-    padding-top: 30px;
-    margin: 0;
-    background: rgb(27, 27, 27);
-}
-
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.5); /* Default link color */
-    transition: color 0.2s ease; /* Transition for link color */
-}
-
-ul {
-    list-style-type: none;
-    padding: 0; /* Reset padding for ul */
-}
-
-.navbar {
-    background: rgb(17, 17, 17);
-    width: 70%; /* Set to 90% for better scaling */
-    max-width: 600px; /* Max width */
-    margin: auto;
-    border-radius: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    padding: 0rem; /* Adjusted padding */
-}
-
-.navbar ul {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    justify-content: space-between; /* Space between items */
-}
-
-.navbar ul li {
-    flex: 1; /* Allow items to grow */
-    text-align: center; /* Center text inside the <li> */
-}
-
-.navbar ul li a {
-    display: block; /* Make the <a> a block element */
-    padding: 15px 20px;
-    border-radius: 3rem;
-    transition: background 0.2s ease; /* Smooth background transition */
-    color: rgba(255, 255, 255, 0.5); /* Default link color */
-    white-space: nowrap; /* Prevent text from wrapping */
-}
-
-/* Hover effect applied to both li and a */
-.navbar ul li a:hover {
-    background: rgba(31, 31, 31, 0.322); /* Background on li hover */
-}
-
-.navbar ul li:hover a {
-    color: white; /* Text color on li hover */
-}
-
-.profile {
-    display: flex;
-    padding-top: 100px;
-    justify-content: center;
-}
-
-.profile img {
-    width: 90px;
-    height: 90px;
-    border-radius: 3rem;
-    box-shadow: 0 0px 12px;
-}
-
-.intro p {
-    padding-top: 100px;
-    color: rgba(255, 255, 255, 0.712);
-    font-size: 2rem;
-    line-height: 1.2;
-    text-align: center;
-    margin: 40px;
-}
-
-.intro p b {
-    color: white;
-}
-
-.intro ul {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
-
-.intro ul li a {
-    margin: 15px 50px;
-    padding: 20px 50px;
-    white-space: nowrap;
-    background: rgb(17, 17, 17);
-    border-radius: 3rem;
-    font-size: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: background 0.2s ease; /* Transition for background */
-}
-
-.intro ul li a {
-    color: white;
-}
-
-/* Hover effect for intro ul */
-.intro ul li a:hover {
-    background: rgba(0, 0, 0, 0.1); /* Background on li hover */
-}
-
-.spacer {
-    margin: auto;
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.spacer div {
+body {
+    padding: 0;
+    margin: 0;
     background-color: white;
-    height: 65px;
-    width: 0.5%;
-    opacity: 0.1;
-    border-radius: 2rem;
 }
 
-.about {
-    padding-top: 100px;
-    text-align: center;
-}
-
-.about h2 {
-    color: white;
+h2 {
     font-size: 2rem;
-    text-shadow: 0 2px 12px rgb(5, 5, 5);
 }
 
-.about p {
-    color: rgba(255, 255, 255, 0.753);
-    line-height: 1.5;
-    margin: auto;
-    padding-top: 15px;
-    text-align: center;
-    width: 80%;
-    font-size: 20px;
-}
+/* 
 
-.projects {
-    padding-top: 100px;
+NAV BAR ------------------------
+
+*/
+
+header {
+    padding-top: 50px;
     text-align: center;
 }
 
-.projects h2 {
-    color: white;
-    font-size: 2rem;
-    text-shadow: 0 2px 12px rgb(5, 5, 5);
+header nav {
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: rgba(255, 255, 255, 0.932);
+    width: 500px;
+    padding: 5px;
+    border-radius: 3rem;
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
 }
 
-.projects ul li {
+header nav ul {
     display: flex;
-    justify-content: center;
+    padding: 0;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(212, 212, 212, 0);
+    padding: 15px;
+    border-radius: 3rem;
+}
+
+header nav ul li a:hover {
+    color: black;
+    transition: color 0.2s ease;
+}
+
+header nav ul li a:active {
+    background-color: rgba(212, 212, 212, 0.13);
+    transition: background-color 0.2s ease;
+}
+
+/* 
+
+------------------------
+
+*/
+
+main {
+    padding-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+/* 
+
+PROFILE PICTURE ------------------------
+
+*/
+
+main .profile {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    z-index: 1;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .4);
+}
+
+/* 
+
+INTRO PARAGRAPH ------------------------
+
+*/
+
+main .intro {
+    width: 30%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+/* 
+
+JUMP BUTTONS ------------------------
+
+*/
+
+main .jumps{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 180px;
+}
+
+main .jumps img {
+    margin: 30px;
+    border-radius: 100%;
+    width: 70px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+}
+
+main .jumps .contactMe {
+    margin: 30px;
+    padding: 20px 40px;
+    border-radius: 3rem;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+
+}
+
+main .jumps .viewWork {
+    margin: 30px;
+    padding: 20px 40px;
+    border-radius: 3rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+
+}
+
+/* 
+
+ABOUT ME ------------------------
+
+*/
+
+main #about {
+    margin: auto;
+    width: 75%;
+    padding-bottom: 100px;
+}
+
+main #about p {
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+/* 
+
+PROJECTS ------------------------
+
+*/
+
+main #projects {
+    width: 65%;
+    margin: auto;
+}
+
+main .projects {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+main .projects a {
+    text-decoration: none;
+    padding: 150px 300px;
+    margin: 10px auto;
+    border-radius: .5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+}
+
+/* 
+
+SKILLS ------------------------
+
+*/
+
+main #skills {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    padding-bottom: 20%;
+}
+
+main #skills li {
+    list-style-type: none;
+    margin: auto;
+    display: flex;
+    float: left;
     padding: 10px;
 }
 
-.projects ul li a {
-    background: rgb(17, 17, 17);
-    border-radius: 0.3rem;
-    color: white;
-    padding: 120px 35%;
-    margin: 10px;
-    transition: background 0.2s ease; /* Transition for background */
+main #skills li a {
+    text-decoration: none;
+    color: black;
+    border-radius: .5rem;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
 }
 
-.projects ul li a:hover {
-    background: rgba(0, 0, 0, 0.5); /* Hover effect */
+/* 
+
+CONTACT ------------------------
+
+*/
+
+main #contact {
+    display: grid;
+    width: 650px;
+    margin: auto;
+    padding-bottom: 100px;
 }
 
-/* Media Queries for Responsiveness */
+main #contact h2 {
+    padding-bottom: 70px;
+}
+
+main #contact a {
+    margin: auto;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+    padding: 0px 250px;
+    border-radius: .5rem;
+    text-align: left;
+    width: 100px;
+    height: 200px;
+}
+
+main #contact h3 {
+    position: relative;
+    color: black;
+    font-size: 30px;
+}
+
+main #contact p {
+    color: black;
+    font-size: 25px;
+}
+
+main #contact a img {
+    position: relative;
+    right: 220%;
+    bottom: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 1rem;
+}
+
+/* 
+
+MOBILE ------------------------
+
+*/
+
 @media (max-width: 768px) {
-    .navbar {
-        width: 70%; /* Maintain width for smaller screens */
-        padding: 0rem; /* Increase padding for smaller screens */
+    header nav {
+        top: 0%;
+        width: 100%;
+        border-radius: 0;
+        transition: all 0.3s ease;
     }
 
-    .navbar ul li {
-        flex: 1; /* Keep items responsive */
-    }
-
-    .intro p {
-        font-size: 1.5rem; /* Adjust font size */
-    }
-
-    .intro ul li {
-        font-size: 100%; /* Adjust font size */
-    }
-
-    .spacer div {
-        height: 50px; /* Adjust height */
-    }
-}
-
-@media (max-width: 480px) {
-    .intro p {
-        font-size: 1.2rem; /* Further adjust for very small screens */
-    }
-
-    .intro ul li {
-        font-size: 15px;
-        padding: 10px 20px; /* Reduce padding */
-        margin: auto 5px; /* Adjust margin */
+    header nav ul li {
+        padding: 15px;
     }
 }
