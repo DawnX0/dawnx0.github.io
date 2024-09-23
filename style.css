@@ -198,7 +198,6 @@ main #skills {
     width: 400px;
     height: 200px;
     margin: auto;
-    padding-bottom: 20%;
 }
 
 main #skills li {
@@ -224,7 +223,7 @@ CONTACT ------------------------
 */
 
 main #contact {
-    padding-top: 20px;
+    padding-top: 50px;
     display: grid;
     width: 100%;
     margin: auto;
