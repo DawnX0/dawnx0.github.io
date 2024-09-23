@@ -256,15 +256,6 @@ main #contact p {
     font-size: 25px;
 }
 
-main #contact a img {
-    position: relative;
-    right: 220%;
-    bottom: 50%;
-    width: 100px;
-    height: 100px;
-    border-radius: 1rem;
-}
-
 /* 
 
 MOBILE ------------------------
