@@ -58,11 +58,6 @@ header nav ul li a:hover {
     transition: color 0.2s ease;
 }
 
-header nav ul li a:active {
-    background-color: rgba(212, 212, 212, 0.13);
-    transition: background-color 0.2s ease;
-}
-
 /* 
 
 ------------------------
@@ -80,6 +75,17 @@ main {
 PROFILE PICTURE ------------------------
 
 */
+
+main > div {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+main > div:target {
+    opacity: 1;
+    visibility: visible;
+}
 
 main .profile {
     margin: 100px auto;
@@ -185,6 +191,7 @@ main .projects a {
     margin: 10px auto;
     border-radius: .5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+    color: black;
 }
 
 /* 
