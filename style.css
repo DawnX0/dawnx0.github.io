@@ -82,7 +82,7 @@ PROFILE PICTURE ------------------------
 */
 
 main .profile {
-    margin: 100px;
+    margin: 100px auto;
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -110,11 +110,10 @@ JUMP BUTTONS ------------------------
 */
 
 main .jumps{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 180px;
+    margin: 150px auto;
 }
 
 main .jumps img {
@@ -169,20 +168,21 @@ PROJECTS ------------------------
 */
 
 main #projects {
-    width: 65%;
+    width: 100%;
     margin: auto;
 }
 
 main .projects {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     padding-top: 50px;
     padding-bottom: 100px;
+    margin: auto;
 }
 
 main .projects a {
     text-decoration: none;
-    padding: 150px 300px;
+    padding: 130px 300px;
     margin: 10px auto;
     border-radius: .5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
@@ -224,25 +224,23 @@ CONTACT ------------------------
 */
 
 main #contact {
+    padding-top: 100px;
     display: grid;
-    width: 650px;
+    width: 100%;
     margin: auto;
     padding-bottom: 100px;
 }
 
 main #contact h2 {
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 }
 
 main #contact a {
-    margin: auto;
+    margin: 0 auto;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
-    padding: 0px 250px;
+    padding: 30px 150px;
     border-radius: .5rem;
-    text-align: left;
-    width: 100px;
-    height: 200px;
 }
 
 main #contact h3 {
@@ -263,6 +261,13 @@ MOBILE ------------------------
 */
 
 @media (max-width: 768px) {
+
+    /*
+
+    NAVBAR ------------------------
+
+    */
+
     header nav {
         top: 0%;
         width: 100%;
@@ -270,7 +275,32 @@ MOBILE ------------------------
         transition: all 0.3s ease;
     }
 
+    header nav ul {
+        max-width: 100%;
+    }
+
     header nav ul li {
-        padding: 15px;
+        padding: 1vw;
+        font-size: 3vw;
+    }
+
+    /*
+
+    PROJECTS ------------------------
+
+    */
+
+    main .projects a {
+        padding: 13vw 30vw;
+    }
+
+    /*
+
+    CONTACT ------------------------
+
+    */
+
+    main #contact a {
+        padding: 7vw 25vw; 
     }
 }
